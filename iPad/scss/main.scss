@@ -4,10 +4,31 @@
     margin: 0;
 }
 
+
 body {
     font-family: "Poppins", sans-serif;
     color: #fff;
     overflow: scroll;
+}
+.navbar {
+    z-index: 99;
+}
+
+body {
+    padding-top: 8em;
+}
+
+.sliderFade {
+    animation: fade 0.5s ease;
+}
+
+.sliderThumb, .sliderMainImage {
+    cursor: pointer;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100%{opacity : 1;}
 }
 
 .background {
@@ -233,8 +254,9 @@ body {
     }
 }
 
-// Screen display
+// Products Table
 
-.screen-display{
-    background-color: #000;
-}
+th, td {
+    padding: 1.5rem !important;
+  }
+
