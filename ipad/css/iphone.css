@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: scroll;
+}
+
+.navbar {
+  z-index: 99;
+}
+
+body {
+  padding-top: 8em;
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    padding-top: 3em !important;
+  }
+}
+.sliderFade {
+  animation: fade 0.5s ease;
+}
+
+.sliderThumb,
+.sliderMainImage {
+  cursor: pointer;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.grids-text {
+  background: -webkit-linear-gradient(#f1b0f7, #e471f3, #bb08f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=iphone.css.map */
