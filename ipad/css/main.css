@@ -59,6 +59,9 @@ body {
   .background .text-video-large {
     font-size: 0.6rem;
     line-height: inherit;
+    position: absolute;
+    margin-inline: 10%;
+    top: 110%;
   }
   .background .background-text {
     padding: 12%;
@@ -160,10 +163,10 @@ body {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .video-background {
-    margin-top: -8%;
+    margin-top: -10%;
   }
   #video-container {
-    top: 10%;
+    top: 0%;
   }
   #video-container h1 {
     font-size: 2.6rem;
