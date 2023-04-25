@@ -21,6 +21,33 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+    <section class="preloader" id="preloader">
+      <div class="loader">
+        <div style="--i:1;"></div>
+        <div style="--i:2;"></div>
+        <div style="--i:3;"></div>
+        <div style="--i:4;"></div>
+        <div style="--i:5;"></div>
+        <div style="--i:6;"></div>
+        <div style="--i:7;"></div>
+        <div style="--i:8;"></div>
+        <div style="--i:9;"></div>
+        <div style="--i:10;"></div>
+        <div style="--i:11;"></div>
+        <div style="--i:12;"></div>
+        <div style="--i:13;"></div>
+        <div style="--i:14;"></div>
+        <div style="--i:15;"></div>
+        <div style="--i:16;"></div>
+        <div style="--i:17;"></div>
+        <div style="--i:18;"></div>
+        <div style="--i:19;"></div>
+        <div style="--i:20;"></div>
+  
+      </div>
+    </section>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
       <div class="container">
         <a class="navbar-brand d-lg-none" href="#">CLAUDIA</a>
@@ -544,5 +571,11 @@
     <script src="./js/magicscroll.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+    </script>
 </body>
 </html>
