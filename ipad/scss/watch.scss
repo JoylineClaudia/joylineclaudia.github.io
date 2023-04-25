@@ -229,12 +229,16 @@ img{
 
 .container{
     position: relative;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     // width: 1200px;
     transform-style: preserve-3d;
+}
+
+.cards{
+    display: flex;
 }
 
 .container .box
