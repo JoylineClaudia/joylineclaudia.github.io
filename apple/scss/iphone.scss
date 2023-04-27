@@ -1,0 +1,110 @@
+/* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    /* FONT */
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+// ---------------------------
+// LOADER
+// ---------------------------
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #171810;
+    animation: animbg 10s linear infinite;
+  }
+  
+  @keyframes animbg  {
+    0% {
+      filter: hue-rotate(0deg)
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  section .loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  
+  section .loader div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+  }
+  
+  section .loader div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00FF00;
+    box-shadow: 0 0 10PX #00FF00, 0 0 20PX #00FF00;
+    animation: anim 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  // preloader end 
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    overflow: scroll;
+}
+.navbar {
+    z-index: 99;
+}
+
+body {
+    font-family: var(--font);
+    padding-top: 8em;
+}
+
+@media only screen and (max-width: 992px) {
+    body{
+        padding-top: 3em !important; 
+    }
+}
+
+.sliderFade {
+    animation: fade 0.5s ease;
+}
+
+.sliderThumb,
+.sliderMainImage {
+    cursor: pointer;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// GRIDS
+.grids-text {
+    background: -webkit-linear-gradient(#f1b0f7,#e471f3, #bb08f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

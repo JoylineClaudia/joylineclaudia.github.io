@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side fix content</title>
+  
+</head>
+<body>
+  <style>
+    html {
+      height: 1.618;
+    }
+    body {
+        font-family: sans-serif;
+    }
+    .bg {
+      background: #9b3636;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100vh;
+      z-index: 1;
+    } 
+    .section {
+      display: flex; 
+      min-height: 100vh;
+      position: relative;
+      z-index: 2;
+    }
+    .section > * {
+      width: 50%; 
+    }
+    .section-img {
+      position: relative;
+      display: flex;
+    }
+    .section-img-inner {
+      height: 100vh;
+      position: fixed;
+      left: 5%;
+      width: 40%;
+      top: 0;
+      mix-blend-mode: multiply;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      filter: blur(30px);
+      opacity: 0;
+      background-position: 50% 40%;
+      transition: .6s ease, opacity .6s ease, background-position .8s ease;
+    }
+    .section-body {
+      display: flex;
+      align-items: center;
+    }
+    .section-text {
+      padding: 5vw;
+    }
+    .section.active .section-img-inner {
+      opacity: 1;
+      background-position: 50% 50%;
+      filter: blur(0);
+    }
+    h2 {
+      font-size: 3vw;
+      margin-bottom: 0.5em;
+      margin-top: 0;
+    }
+
+  </style>
+  
+  <div class="section">
+    <div class="section-img">
+      <div class="section-img-inner" style="background-image: url(./images/chip1.jpg);"></div>
+    </div>
+    <div class="section-body">
+      <div class="section-text">
+        <h2>ADIDAS PREDATOR 20+</h2>
+        <p> 
+          The mutation has begun people! And we cannot contain our excitement. 
+          The Adidas Mutator pack comprises of the Mutator versions of the Adidas X, Copa, Nemeziz and Predator football shoes; so
+          you can establish yourself as a game changer on the football pitch.  
+          Designed for the control towers, The adidas Predator Shoe is an absolute beast. 
+          Featuring the infamous adidas Demonskin, a set of contoured rubber spikes that enhance your ball control and accuracy.
+          The Control Frame outsole provides greater energy-return to keep you in control of the game. 
+          Be it a terrifying, defense-splitting pass or smash the ball into the net with fearsome accuracy – become an unfair
+          advantage to your team.  
+        </p>   
+      </div>
+    </div> 
+  </div>  
+
+  <div class="section">
+    <div class="section-img">
+      <div class="section-img-inner" style="background-image: url(./images/chip2.jpg);"></div>
+    </div>
+    <div class="section-body">
+      <div class="section-text">
+        <h2>ADIDAS COPA 20+</h2>
+        <p>
+            M2 chip. The M2 chip is the next generation of Apple silicon, with an 8‑core CPU that delivers up to 15% faster performance and a 10‑core GPU that provides up to 35% faster graphics performance.1 With a 40% faster Neural Engine to accelerate machine learning tasks and 50% more memory bandwidth, M2 brings astonishing performance and new capabilities to iPad Pro. So you can create photorealistic 3D designs, build intricate AR models and play games with console‑quality graphics at high frame rates faster than ever. All while enjoying all‑day battery life.2
+        </p> 
+      </div>
+    </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(window).scroll(function(){
+      let $window = $(window),
+          $body = $('body'),   
+          $section = $('.section');
+      let scroll = $window.scrollTop() + ($window.height() / 3);
+      $section.each(function(){ 
+        if($(this).position().top <= scroll && $(this).position().top + $(this).height() > scroll){
+          $body.removeClass(function (index, css){
+            return (css.match (/(^|\s)color-\s+/g) || [].join(' '));
+          });
+          $('.section').removeClass('active');
+          $(this).addClass('active');
+        }
+      });
+    }).scroll();
+</script>
+</body>
+</html>
