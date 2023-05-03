@@ -1,6 +1,13 @@
 const screen = document.querySelector('#screen');
 const btn = document.querySelectorAll('.btn');
 
+var historyData = [];
+var expressionData = "";
+var resultData = "";
+screen.onkeydown = function () {
+  console.log(screen.value);
+};
+
 for (item of btn) {
     item.addEventListener('click', (e) => {
         btntext = e.target.innerText;
@@ -12,6 +19,11 @@ for (item of btn) {
         if (btntext == '%') {
             btntext = '/';
         }
+
+        if (btntext == 'radic') {
+            btntext = '√';
+        }
+
         screen.value += btntext;
     });
 }
@@ -32,9 +44,9 @@ for (item of btn) {
         screen.value = Math.pow(screen.value, 2);
     }
 
-    function sqrt() {
-        screen.value = Math.sqrt(screen.value, 2);
-    }
+    // function sqrt() {
+    //     screen.value = Math.sqrt(screen.value, 2);
+    // }
 
     function log() {
         screen.value = Math.log(screen.value);
@@ -86,18 +98,6 @@ for (item of btn) {
 //     }
 // })
 
-function sin()
-{
-    display.innerHTML=Math.sin(display.innerText);
-}
-function cos()
-{
-    display.innerHTML=Math.cos(display.innerText);
-}
-function tan()
-{
-    display.innerHTML=Math.tan(display.innerText);
-}
 
 
 const themeToggleBtn = document.querySelector('.theme-toggler');
@@ -109,3 +109,41 @@ themeToggleBtn.onclick = () => {
     themeToggleBtn.classList.toggle('active');
     isDark = !isDark;
 }
+
+let history = document.getElementById('history');
+function calculation(value){
+    para = document.createElement('p');
+    data = value + " " + eval(value);
+    para.innertext= data;
+    history.appendChild(para);
+    return eval(value)
+}
+
+function save(){
+    expressionData = screen.value;
+    //var newinput = oldinput + input;
+    //expressionData = input;
+    //screen.value = newinput;
+    var result = eval(screen.value);
+    resultData = result;
+    historyData.push({ expression: expressionData, result: resultData });
+    showLogdata();
+    resultData = "";
+    expressionData = "";
+    screen.value = result;
+}
+
+function showLogdata() {
+    var log = document.getElementById("history_log");
+    var string = "";
+    for (var key in historyData) {
+      string +="<div class=\"card\">" +
+        "" + 
+        historyData[key]["expression"] +
+        " = " +
+        historyData[key]["result"] +
+        "<br></div>";
+    }
+  
+    log.innerHTML = string;
+  }

@@ -109,7 +109,7 @@ body {
     }
 
     button#eval {
-        height: 130px;
+        height: 60px;
     }
 
     // Light Theme 
@@ -163,6 +163,33 @@ body {
         background-color: #223323;
         color: #fff;
     }
+
+    // History
+    #history {
+        width: 240px;
+        height: 371.2px;
+        overflow-y: scroll;
+        font-size: 1.1em;
+        background: #4b7bec;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    #history :: -webkit-scrollbar {
+        width: 0;
+    }
+
+    #history h3{
+        padding: 10px 0px;
+        font-size: 1.2em;
+    }
+
+    #history p:last-child {
+        font-size: 1.3em;
+        font-weight: 500;
+        color: #eee;
+    }
+    
 
 }
 

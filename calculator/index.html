@@ -130,7 +130,8 @@
             </tr>
             <tr>
               <td><button onclick="sin()" class="btn-operator" >sin</button></td>
-              <td><button class="btn-operator" onclick="sqrt()">&radic;</button></td>
+              <!-- <td><button class="btn-operator" onclick="sqrt()">&radic;</button></td> -->
+              <td><button class="btn-operator btn">&radic;</button></td>
               <td><button class="btn-number btn">7</button></td>
               <td><button class="btn-number btn">8</button></td>
               <td><button class="btn-number btn">9</button></td>
@@ -150,7 +151,7 @@
               <td><button class="btn-number btn">1</button></td>
               <td><button class="btn-number btn">2</button></td>
               <td><button class="btn-number btn">3</button></td>
-              <td rowspan="2"><button class="btn-equal" id="eval" onclick="screen.value=eval(screen.value)">=</button></td>
+              <td><button class="btn-equal" id="eval" onclick="screen.value=eval(screen.value)">=</button></td>
             </tr>
             <tr>
               <td><button class="btn-operator" onclick="e()">e</button></td>
@@ -158,9 +159,19 @@
               <td><button class="btn-operator btn">(</button></td>
               <td><button class="btn-number btn">0</button></td>
               <td><button class="btn-operator btn">)</button></td>
+              <td><button class="btn-equal" id="save" onclick='save()'>Save</button></td>
             </tr>
           </table>
         </div>
+
+        <!-- History -->
+        <div id="history">
+          <h3>History</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" id="history_log"></div>
+        </div>
+        <!-- History -->
       </div>
     </div>
   </section>
