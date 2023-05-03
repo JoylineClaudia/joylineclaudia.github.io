@@ -73,9 +73,9 @@ body {
         z-index: -1;
     }
 
-    #display {
+    #screen {
         margin: 0 10px;
-        height: 150px;
+        height: 100px;
         width: auto;
         // max-width: 270px;
         display: flex;
@@ -87,7 +87,7 @@ body {
         overflow-x: scroll;
     }
 
-    #display::-webkit-scrollbar {
+    #screen::-webkit-scrollbar {
         display: block;
         height: 3px;
     }
@@ -108,7 +108,7 @@ body {
         transform: scale(1.11);
     }
 
-    button#equal {
+    button#eval {
         height: 130px;
     }
 
@@ -116,7 +116,7 @@ body {
     .calculator{
         background-color: #fff;
     }
-    .calculator#display{
+    .calculator#screen{
         color: #0a1e23;
     }
     .calculator button#clear{
@@ -142,7 +142,7 @@ body {
         background-color: #071115;
     }
 
-    .calculator.dark#display{
+    .calculator.dark#screen{
         color: #f8fafd;
     }
 

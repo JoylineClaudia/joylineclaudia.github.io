@@ -73,32 +73,32 @@
             <div class="d-block w-100">
               <ul class="navbar-nav d-flex justify-content-center pt-3">
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="iphone.html">
+                  <a class="nav-link" href="#">
                     iPhone
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="mac.html">
+                  <a class="nav-link" href="#">
                     Mac
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" href="#">
                     iPad
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="watch.html">
+                  <a class="nav-link" href="#">
                     Watch
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="airpods.html">
+                  <a class="nav-link" href="#">
                     AirPods
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="accesories.html">
+                  <a class="nav-link" href="#">
                     Accesories
                   </a>
                 </li>
@@ -115,48 +115,49 @@
           <i class="toggler-icon"></i>
         </div>
         <div class="display-screen">
-          <div id="display"></div>
+          <!-- <div id="screen"></div> -->
+          <input id="screen" type="text" placeholder="0">
         </div>
         <div class="buttons">
           <table>
             <tr>
-              <td><button class="btn-operator" id="clear">C</button></td>
-              <td><button class="btn-operator" id="factorial">x!</button></td>
-              <td><button class="btn-number" id="dot">.</button></td>
-              <td><button class="btn-operator" id="/">&divide</button></td>
-              <td><button class="btn-operator" id="*">&times</button></td>
-              <td><button class="btn-operator" id="backspace"><</button></td>
+              <td><button class="btn-operator" id="ac" onclick="screen.value=''">AC</button></td>
+              <td><button class="btn-operator" onclick="fact()">x!</button></td>
+              <td><button class="btn-number btn" >.</button></td>
+              <td><button class="btn-operator btn">%</button></td>
+              <td><button class="btn-operator btn">x</button></td>
+              <td><button class="btn-operator" onclick="backspc()" id="ce"><</button></td>
             </tr>
             <tr>
-              <td><button class="btn-operator" id="sin">sin</button></td>
-              <td><button class="btn-operator" id="square-root">&radic;</button></td>
-              <td><button class="btn-number" id="7">7</button></td>
-              <td><button class="btn-number" id="8">8</button></td>
-              <td><button class="btn-number" id="9">9</button></td>
-              <td><button class="btn-operator" id="-">-</button></td>
+              <td><button onclick="sin()" class="btn-operator" >sin</button></td>
+              <td><button class="btn-operator" onclick="sqrt()">&radic;</button></td>
+              <td><button class="btn-number btn">7</button></td>
+              <td><button class="btn-number btn">8</button></td>
+              <td><button class="btn-number btn">9</button></td>
+              <td><button class="btn-operator btn">-</button></td>
             </tr>
             <tr>
-              <td><button class="btn-operator" id="cos">cos</button></td>
-              <td><button class="btn-operator" id="pi">&Pi;</button></td>
-              <td><button class="btn-number" id="4">4</button></td>
-              <td><button class="btn-number" id="5">5</button></td>
-              <td><button class="btn-number" id="6">6</button></td>
-              <td><button class="btn-operator" id="+">+</button></td>
+              <td><button class="btn-operator" onclick="cos()">cos</button></td>
+              <td><button class="btn-operator" onclick="pi()">&Pi;</button></td>
+              <td><button class="btn-number btn" >4</button></td>
+              <td><button class="btn-number btn">5</button></td>
+              <td><button class="btn-number btn">6</button></td>
+              <td><button class="btn-operator btn">+</button></td>
             </tr>
             <tr>
-              <td><button class="btn-operator" id="tan">tan</button></td>
-              <td><button class="btn-operator" id="log">log</button></td>
-              <td><button class="btn-number" id="1">1</button></td>
-              <td><button class="btn-number" id="2">2</button></td>
-              <td><button class="btn-number" id="3">3</button></td>
-              <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+              <td><button class="btn-operator" onclick="tan()">tan</button></td>
+              <td><button class="btn-operator" onclick="log()">log</button></td>
+              <td><button class="btn-number btn">1</button></td>
+              <td><button class="btn-number btn">2</button></td>
+              <td><button class="btn-number btn">3</button></td>
+              <td rowspan="2"><button class="btn-equal" id="eval" onclick="screen.value=eval(screen.value)">=</button></td>
             </tr>
             <tr>
-              <td><button class="btn-operator" id="e">e</button></td>
-              <td><button class="btn-operator" id="square">x<sup>2</sup></button></td>
-              <td><button class="btn-operator" id="(">(</button></td>
-              <td><button class="btn-number" id="0">0</button></td>
-              <td><button class="btn-operator" id=")">)</button></td>
+              <td><button class="btn-operator" onclick="e()">e</button></td>
+              <td><button class="btn-operator" onclick="pow()">x<sup>2</sup></button></td>
+              <td><button class="btn-operator btn">(</button></td>
+              <td><button class="btn-number btn">0</button></td>
+              <td><button class="btn-operator btn">)</button></td>
             </tr>
           </table>
         </div>
