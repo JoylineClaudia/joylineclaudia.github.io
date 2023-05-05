@@ -137,7 +137,7 @@ function showLogdata() {
     var log = document.getElementById("history_log");
     var string = "";
     for (var key in historyData) {
-      string +="<div class=\"card\">" +
+      string +="<div class=\"alert alert-primary\" role=\"alert\">" +
         "" + 
         historyData[key]["expression"] +
         " = " +
