@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scientific Calculator </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/calculator.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="./js/calculator.js" defer></script>
+    </head>
+    <body>
+        <section class="calc ">
+        <div class="row">
+        <div id="main-calc" class="col-md-5 ps-5 pt-5">
+        <div class="calculator dark ps-5 pb-5">
+            <section class="top">
+                <div id="display" contenteditable="false"></div>
+                <section class="py-2" id="result">=</section>
+            </section>
+            <section id="buttons" class="buttons">
+            <div class="top-rows">
+                <!-- <button class="btn-operator btn-special btn-rare2 btn-none" id="2nd">2nd</button> -->
+                <table>
+                    <tr>
+                        <td><button class="btn-operator btn-special btn-sign btn-none">±</button></td>
+                        <!-- <td><button class="btn-operator btn-special btn-fact">!</button></td> -->
+                        <td><button class="btn-operator btn-special btn-%">%</button></td>
+                        <td><button class="btn-operator btn-special btn-PI">π</button></td>
+                        <td><button class="btn-operator btn-special">(</button></td></td>
+                        <td><button class="btn-operator btn-special">)</button></td>
+                        <td><button class="btn btn-del" id="Del">C</button></td>
+                        <td><button class="btn btn-rare btn-AC" id="btn-AC">AC</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator btn-special btn-exp1 btn-none" id="btn-exp1">x <sup>-1</sup></button></td>
+                        <td><button class="btn-operator btn-special btn-E">e</button></td>
+                        <td><button class="btn-operator btn-special btn-alg sin">sin</button></td>
+                        <td><button class="btn-number btn-num">7</button></td>
+                        <td><button class="btn-number btn-num">8</button></td>
+                        <td><button class="btn-number btn-num">9</button></td>
+                        <td><button class="btn-operator btn-special btn-div">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator btn-special btn-sqrt">√</button></button></td>
+                        <td><button class="btn-operator btn-special btn-pow btn-none">x<sup>y</sup></button></td>
+                        <td> <button class="btn-operator btn-special btn-alg cos">cos</button></td>
+                        <td><button class="btn-number btn-num">4</button></td>
+                        <td><button class="btn-number btn-num">5</button></td>
+                        <td><button class="btn-number btn-num">6</button></td>
+                        <td><button class="btn-operator btn-special btn-mult">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator btn-special btn-exp2 btn-none">x<sup>2</sup></button> </td>
+                        <td><button class="btn-operator btn-special btn-alg log10 ">log</button></td>
+                        <td><button class="btn-operator btn-special btn-alg tan">tan</button></td>
+                        <td><button class="btn-number btn-num">1</button></td>
+                        <td><button class="btn-number btn-num">2</button></td>
+                        <td><button class="btn-number btn-num">3</button></td>
+                        <td><button class="btn-operator btn-special btn-minus">-</button></td>
+                    </tr>
+                    <tr>
+                        <!-- <td><button class="btn-operator btn-special btn-abs ">|x|</button></td> -->
+                        <td><button class="btn-operator btn-equal btn-special btn-Ans btn-none">Ans</button></td>
+                        <td><button class="btn-operator btn-special btn-alg log">ln</button></td>
+                        <!-- <td><button class="btn-operator btn-special btn-exp3 ">x <sup>3</sup></button></td> -->
+                        <td><button class="btn-number btn-num">0</button></td>
+                        <td><button class="btn-number btn-dot">.</button></td>
+                        <td><button class="btn-operator btn-special btn-plus">+</button></td>
+                        <td colspan="2"><button class="btn btn-fun btn-equal btn-rare2"  style="color: #FFF; background-color: #46e0bc; width: 121px; border-radius: 50px;" id="btn-equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                    
+                </table>
+             
+                
+            </div>
+            
+            </section>
+        
+    </div>
+    </div>
+        <div class="col-md-5">
+            <section class="mt-5 ms-5">
+                <p class="fs-2 text-black"> <em> <b class="fw-1"> History </b></em> <span class="badge bg-primary text-wrap" id="clearAll">Clear</span>
+                    <br>
+                </p>
+                <section id="historial" class="text-black"></section>
+            </section>
+        </div>
+    </div>
+   
+</section>
+<script src="./js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
